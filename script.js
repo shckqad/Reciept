@@ -62,56 +62,42 @@ el.textContent = 'Grand Total = $ ' + total; */
 
 
 
-var price1;
-var quantity1;
-var total1;
 
-price1 = 20;
-quantity1 = 1;
-total1 = price1 * quantity1;
+var price1 = document.getElementById('price1');
+var total1 = price1.textContent;
 
-var el = document.getElementById('total1');
-el.textContent = '$' + total1;
-
-var price2;
-var quantity2;
-var total2;
-
-price2 = 10;
-quantity2 = 1;
-total2 = price2 * quantity2;
-
-var el = document.getElementById('total2');
-el.textContent = '$' + total2;
-
-var price3;
-var quantity3;
-var total3;
-
-price3 = 100;
-quantity3 = 1;
-total3 = price3 * quantity3;
-
-var el = document.getElementById('total3');
-el.textContent = '$' + total3;
+var soapElement = document.getElementById('total1');
+soapElement.textContent = total1;
 
 
-var subTotal = (total1 + total2) + total3;
+var price2 = document.getElementById('price2');
+var total2 = price2.textContent;
 
-var el = document.getElementById('Subtotal');
-el.textContent = 'Subtotal: $' + subTotal;
+var pastaElement = document.getElementById('total2');
+pastaElement.textContent = total2;
+
+var price3 = document.getElementById('price3');
+total3 = price3.textContent;
+
+var kampfTotal = document.getElementById('total3');
+kampfTotal.textContent = total3;
+
+var subTotal = parseInt(total1) + parseInt(total2) + parseInt(total3);
+
+var sTotal = document.getElementById('Subtotal');
+sTotal.textContent = 'Subtotal: ' + subTotal;
 
 var discount = (subTotal * 0.05);
 
-var el = document.getElementById('discount');
-el.textContent = 'Discount(5%): -$' + discount;
+var discountElement = document.getElementById('discount');
+discountElement.textContent = 'Discount(5%): -$' + discount;
 
 var vat = (subTotal * 0.125);
 
-var el = document.getElementById('VAT');
-el.textContent = 'TAX(12.5%): $' + vat;
+var vatElement = document.getElementById('VAT');
+vatElement.textContent = 'TAX(12.5%): $' + vat;
 
 var grandTotal = (subTotal + vat) - discount;
 
-var el = document.getElementById('gtoa');
-el.textContent = 'Order Total: $' + grandTotal;
+var gtoaElement = document.getElementById('gtoa');
+gtoaElement.textContent = 'Order Total: $' + grandTotal;
